@@ -2,7 +2,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from database import get_db
-from app import models, schemas
+import models, schemas
 
 router = APIRouter(prefix="/notifications", tags=["Notifications"])
 
