@@ -1,8 +1,8 @@
 from fastapi import FastAPI, Depends, APIRouter
 from fastapi.middleware.cors import CORSMiddleware
-from .database import engine, Base
-from .routers import students, faculty, departments, courses, enrollments, auth, student_dashboard, admin, notifications, results,exams,admin_notifications
-from .utils import get_current_user
+from database import engine, Base
+from routers import students, faculty, departments, courses, enrollments, auth, student_dashboard, admin, notifications, results,exams,admin_notifications
+from utils import get_current_user
 
 # Create tables
 Base.metadata.create_all(bind=engine)
