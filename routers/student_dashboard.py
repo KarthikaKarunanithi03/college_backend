@@ -2,9 +2,9 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
-from ..database import get_db
-from .. import models, schemas
-from ..utils import get_password_hash, get_current_admin, create_access_token
+from database import get_db
+from app import models, schemas
+from utils import get_password_hash, get_current_admin, create_access_token
 from passlib.context import CryptContext
 
 router = APIRouter(prefix="/student", tags=["Admin Dashboard"])

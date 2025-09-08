@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from .. import models, schemas, database, utils
-from ..utils import verify_password, create_access_token
+import models, schemas, database, utils
+from utils import verify_password, create_access_token
 from datetime import timedelta
 
 router = APIRouter(prefix="/auth", tags=["Authentication"])

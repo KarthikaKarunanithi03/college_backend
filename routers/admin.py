@@ -1,11 +1,11 @@
 # app/routers/admin.py
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
-from .. import models, schemas
-from ..database import get_db
-from ..utils import get_password_hash, get_current_admin, create_access_token
+from models import models, schemas
+from database import get_db
+from utils import get_password_hash, get_current_admin, create_access_token
 from passlib.context import CryptContext
-from ..schemas import FacultyAssignmentRequest
+from schemas import FacultyAssignmentRequest
 from fastapi import Body
 import logging
 

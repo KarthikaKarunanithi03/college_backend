@@ -1,9 +1,9 @@
 # routers/admin_notifications.py
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from .. import models, schemas
-from ..database import get_db
-from ..utils import get_current_admin
+import models, schemas
+from database import get_db
+from utils import get_current_admin
 from typing import List
 
 router = APIRouter(prefix="/admin-not", tags=["Admin Notifications"])
